@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Унарные операции, условие, циклы</title>
+</head>
+<body>
+  <script>
+      var myVariable = 'Bob';
+      myVariable = 'Steve';
+    
+      var c = 49;
+
+      if (c > 50) {
+        console.log("Значение больше 50");
+      } else if (c == 50) {
+        console.log("Значение равно 50");
+      } else {
+        console.log("Значение меньше 50");
+      }
+
+      var iceCream = 'chocolate';
+        if (iceCream === 'chocolate') {
+          alert('Yay, I love chocolate ice cream!');
+        } else {
+          alert('Awwww, but chocolate is my favorite...');
+      }
+      
+      //var d = 4;
+      //var e = 2;
+
+      //Краткая запись if-else
+      //var f = (d>e) ? d : e;
+      //console.log(f);
+
+      /*|| -> +
+      && -> **/
+
+      //console.log(1&&1);
+
+      /*
+      
+      true->1
+      false->0
+
+      */
+
+      //alert(!4);
+
+      var num = 12;
+
+      while (num >= 0) {
+        console.log(num);
+        num--;
+      }
+
+      do {
+        console.log(num);
+        num--;
+      } while (num > 10)
+
+      // Начальное значение, условие окончания цикла, условия в процесе его выполнения
+      for (var i = 0; i < 10; i++) { 
+        // до девяти - break; if(i==6) continue; 
+        var y = 5; 
+        var h = 9; 
+        var e = y + h; 
+        switch (e) {
+          case 11: 
+          case 13: 
+          console.log("Это не то, что мы ожидали"); 
+          break; 
+          case 12:
+            console.log("Это не то, что мы ожидали ");
+            break;
+          default:
+            console.log(" Действие по умолчанию"); 
+            break;
+        }
+      }
+  </script>
+</body>
+</html>

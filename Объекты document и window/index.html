@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      display: block;
+      height: 200px;
+      width: 200px;
+      background-color:  #0707076f;
+    }
+  </style>
+</head>
+<body>
+<script>
+
+
+  document.write("HTML документ");
+
+  document.write("<h1>HTML документ</h1>");
+
+
+  var root = document.documentElement;
+  console.log(root);
+
+  var body = document.body;
+  console.log(body);
+
+  document.body.style.backgroundColor = "#fff";
+  
+  // Дочерние элементы
+  console.log(body.childNodes);
+  
+  // Родительский элемент
+  document.write(body.firstChild);
+
+  var div = document.createElement("div");
+  div.classList.add("container");
+
+  body.appendChild(div);
+
+  var p = document.createElement("p");
+  p.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci deleniti sapiente ea amet quam odit culpa doloremque ab, voluptatibus modi cupiditate laborum odio! Molestiae, recusandae, voluptatem laudantium ipsam earum ab.";
+
+  p.className = "myClass";
+  p.setAttribute("id", "myId");
+
+  body.appendChild(p);
+
+
+  var el = document.getElementById("myId");
+  console.log(el);
+
+  var elems = document.getElementsByTagName("p");
+  console.log(elems);
+
+  var a = document.getElementsByClassName("myClass");
+  console.log(a);
+
+  var b = document.querySelector("p");
+  console.log(b);
+
+  var c = document.querySelectorAll("ul li");
+
+
+  //window
+
+  var btn = document.createElement("button");
+  btn.innerText = "Нажми меня";
+  body.appendChild(btn);
+
+  btn.onclick = function () {
+    //window.open("", "", "width=200, height=200");
+    //window.print();
+    console.log(window.location.href);
+    window.setTimeout(function () {
+      //alert("Привет");	
+    }, 2000);
+
+
+    window.setInterval(function () {
+      alert("Привет");
+    }, 2000);
+  }
+
+
+</script>
+<script src="test.js"></script>
+</body>
+</html>

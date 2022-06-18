@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Прототипы</title>
+</head>
+<body>
+  <script>
+
+    /*
+    1.Постоянное свойство _proto
+    2. Поиск свойств в другом объекте
+    3. Если имеется свойство, оно будет читаться у объекта
+    4. Дополнение (добавление свойства к объекту)
+    5. Прототип только от одного объекта
+    */
+
+
+    function Programmer(name, lang) {
+      this.name = name;
+      this.lang = lang;
+    }
+
+    var aleks = new Programmer("Алекс", "javascript");
+    var ivan = {};
+
+    console.log(aleks);
+    console.log(ivan);        //(1)
+    // Добавить свойства пустому обьекту
+    ivan.__proto__ = aleks;    //kamil - прототип объекта ivan
+
+    console.log(ivan.name);    //(2)
+
+    var alex = {
+      name: "Александр",
+      lang: "php"
+    };
+
+    alex.__proto__ = ivan;
+
+    console.log(alex.name); // (3)
+
+    alex.mail = "mail@ivan.com";    // (4)
+
+    console.log(alex);
+
+    console.log("\n\n");
+
+    console.log(ivan);
+    console.log(ivan);
+    console.log(alex);
+
+    var peter = {};
+
+    peter.__proto__ = ivan;
+    console.log(peter);
+
+    peter.__proto__ = alex;
+    console.log(peter); // (5)
+
+    var yura = {
+      name: "Юра",
+      lane: "Figma",
+      likeSport: true
+    };
+
+    function webDeveloper(name, lang) {
+      this.name = name;
+      this.lang = lang;
+    }
+    webDeveloper.prototype = yura;
+    var kamil = new webDeveloper("kamil");
+    console.log(kamil);
+  </script>
+
+</body>
+</html>

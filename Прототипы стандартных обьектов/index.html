@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Прототипы стандартных обьектов</title>
+</head>
+<body>
+  <script>
+     /*
+      Создание полностью пустого объекта (1)
+      Добавление своего метода в класс (2)
+    */
+
+
+
+      var aleks = {}; // то же самое, что и var variable = new Object();
+      console.log(aleks);
+
+
+      var Aleks = Object.create(null);   //(1)
+      console.log(Aleks);
+      var arr = new Array();
+      console.log(arr);
+
+
+
+      var str = new String("Александр Долинский");
+      console.log(str);
+      alert(str.toUpperCase());
+      // прото ето некое хранилище обьекта
+      String.prototype.sayHi = function () {
+        console.log("Привет");
+      }
+
+      str.sayHi();
+
+      var st = new String("Марат");
+
+      st.sayHi();
+    
+
+  </script>
+</body>
+</html>

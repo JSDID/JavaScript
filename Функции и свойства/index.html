@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can i do</title>
+</head>
+<body>
+  <script>
+    var str = "javaScript";
+    console.log(str.length);
+    console.log(str.slice(0,4));
+    console.log(str.toLocaleUpperCase());
+    console.log(str.toLocaleLowerCase());
+
+    var browserType;
+    browserType.replace('edge', 'chrome');
+    console.log(browserType);
+    
+    var symb = str.charAt(10);
+    console.log(symb);
+
+    str = str.toUpperCase();
+    console.log(str);
+
+    function summa(a, b) {
+      var s = a + b;
+      return s;
+    }
+    // Результат работы суммы
+      var res = summa(5, 10);
+      console.log(res);
+
+
+      function division(a, b) {
+        if (b == 0) {
+          // Проевка на деление
+          alert("На нуль делить нельзя");
+          // Функция не может дальше работать
+          return false;
+        }
+        var d = a / b;
+        return d;
+      }
+
+      var div = division(10, 5);
+      console.log(div);
+
+      function multiply(num1, num2) {
+          var result = num1 * num2;
+          return result;
+        }
+      
+      multiply(4, 7);
+      multiply(20, 20);
+      multiply(0.5, 3);
+
+      function swap(x, y) {
+          var t = x;
+          x = y;
+          y = t;
+          return (x + y);
+          // return [x, y]
+        }
+
+        console.log(swap(2, 3));
+        
+  </script>
+</body>
+</html>

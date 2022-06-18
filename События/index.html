@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1></h1>
+  <button id="getDate"></button>
+  <p id="date"></p>
+  
+  <img src="https://placekitten.com/g/150/150" alt="" id="kitten">
+  
+  <p>Позиция по горизонтали: <span id="xPos"></span></p>
+  <p>Позиция по вертикали: <span id="yPos"></span></p>
+  
+  <input type="text" id="keyCode">
+  <script>
+  
+    var myHeading = document.querySelector('h1');
+    myHeading.textContent = 'Hello world!';
+
+    var myButton = document.querySelector('Button');
+    myButton.textContent = 'Показать дату';
+
+    var btn = document.getElementById("getDate");
+    var p = document.getElementById("date");
+    var img = document.getElementById("kitten");
+    var x = document.getElementById("xPos");
+    var y = document.getElementById("yPos");
+    var code = document.getElementById("keyCode");
+    var body = document.body;
+
+    btn.onclick = function () {
+      p.innerHTML = Date();
+    }
+
+    // При клике на правой кнопке мышки
+
+    img.oncontextmenu = function () {
+      alert("Котик");
+    }
+
+    // Когда навели на картинку
+
+    img.onmouseover = function () {
+      this.style.borderRadius = "20px";
+    }
+
+    // Когда убрали мышку от картинки
+
+    img.onmouseout = function () {
+      this.style.display = "none";
+    }
+
+    // Движение мышки
+
+    body.onmousemove = function () {
+      //x.innerHTML = event.clientX;
+      //y.innerHTML = event.clientY;
+
+      //x.innerHTML = event.pageX;
+      //y.innerHTML = event.pageY;
+    }
+
+    // Связанное с клавиатурой
+
+    code.onkeydown = function () {
+      p.innerHTML = event.keyCode;
+    }
+
+    document.querySelector('html').onclick = function () {
+        alert('Ouch! Stop poking me!');
+    }
+
+    var myHTML = document.querySelector('html');
+    myHTML.onclick = function () { };
+
+  </script>
+  </body>
+  </html>

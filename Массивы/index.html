@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+   var arr = ['первый элемент', 'второй элемент', 'последний элемент'];
+    console.log(arr[0]);              // напечатает 'первый элемент'
+    console.log(arr[1]);              // напечатает 'второй элемент'
+    console.log(arr[arr.length - 1]); // напечатает 'последний элемент'
+    var years = [1950, 1960, 1970, 1980, 1990, 2000, 2010];
+    // console.log(years.0);   синтаксическая ошибка
+      console.log(years[0]);  // работает как положено
+    /* 
+
+    Аналогично, к свойствам объекта, являющимся зарезервированными словами(!) можно получить доступ только посредством скобочной нотации:
+
+    */
+    
+    var promise = {
+        'var': 'text',
+        'array': [1, 2, 3, 4]
+    };
+    console.log(promise['array']);
+
+  </script>
+</body>
+</html>

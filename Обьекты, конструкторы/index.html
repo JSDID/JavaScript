@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    var date = new Date();
+    console.log(date);
+
+    var chislo = 5;
+    var stroka = "stroka";
+
+    var aleks = {
+      name: "Александр",
+      age: 30,
+      birthdate: {
+        day: 22,
+        month: "август",
+        year: 1992
+      },
+      sayName: function () {
+        console.log("Меня зовут " + aleks.name);
+      }
+    };
+
+    console.log(aleks);
+    aleks.name = "Aleksandr";
+    console.log(aleks);
+
+    var emptyObj = new Object();
+    console.log(emptyObj);
+
+    var anotherEmptyObj = {};
+    console.log(anotherEmptyObj);
+
+    // Конструктор жто не что иное как функция
+    // Обьект который имеет имя и возрст и выдает сообщение
+    
+    function Man(name, age) {
+      this.name = name;
+      this.age = age;
+      var hello = "Меня зовут";
+      this.sayMyName = function () {
+        console.log(hello + " " + this.name);
+      }
+    }
+
+    var aleks = new Man("Александр", 22);
+    console.log(aleks);
+    </script>
+</body>
+</html>

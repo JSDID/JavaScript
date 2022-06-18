@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <form action="" onsubmit="return validate();">
+    <input type="text" id="userName">
+    <input type="password" id="userPassword">
+
+    <button type="submit">Отправить</button>
+  </form>
+
+  <script>
+
+    function validate() {
+      var userName = document.getElementById("userName");
+      var userPassword = document.getElementById("userPassword");
+
+
+      if (!userName.value) {
+        userName.style.border = "2px solid red";
+        return false;
+      }
+
+      if (!userPassword.value) {
+        userPassword.style.border = "2px solid red";
+        return false;
+      }
+
+
+      return true;
+
+    }
+
+
+  </script>
+
+</body>
+</html>
