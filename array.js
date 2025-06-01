@@ -1,21 +1,20 @@
-// array 
 
 /* values(): Этот метод возвращает итератор,
 который предоставляет значения для каждого индекса в
 массиве. Он не принимает аргументов. */
 
-const arr1 = ['apple', 'banana', 'cherry']
-const iterator = arr1.values();
-for (const value of iterator) {
-    console.log(value);
-} // Output: apple banana cherry
+const arr1 = ['apple', 'banana', 'cherry'];
+const iter1 = arr1.values();
+for (const val1 of iter1) {
+    console.log(val1); // apple, banana, cherry
+}
 
 /*
 length(): Это свойство возвращает длину массива.
 */
 
-arr2 = ['apple', 'banana', 'cherry']
-console.log(arr2.length); // Output: 3
+const arr2 = ['apple', 'banana', 'cherry'];
+console.log(arr2.length); // 3
 
 /* 
 reverse(): Этот метод меняет порядок элементов в массиве на обратный.
@@ -23,7 +22,7 @@ reverse(): Этот метод меняет порядок элементов в
 
 const arr3 = ['apple', 'banana', 'cherry'];
 arr3.reverse();
-console.log(arr3); // Output: ['cherry', 'banana', 'apple']
+console.log(arr3); // ['cherry', 'banana', 'apple']
 
 /*
 sort(): Этот метод сортирует элементы
@@ -34,7 +33,7 @@ sort(): Этот метод сортирует элементы
 
 const arr4 = ['banana', 'apple', 'cherry'];
 arr4.sort();
-console.log(arr4); // Output: ['apple', 'banana', 'cherry']
+console.log(arr4); // ['apple', 'banana', 'cherry']
 
 /*
 at(): Этот метод возвращает элемент по указанному индексу в массиве. Он принимает один
@@ -42,7 +41,7 @@ at(): Этот метод возвращает элемент по указан�
 */
 
 const arr5 = ['apple', 'banana', 'cherry'];
-console.log(arr5.at(1)); // Output: 'banana
+console.log(arr5.at(1)); // 'banana'
 
 /*
 fill(): Этот метод заполняет все элементы
@@ -54,7 +53,8 @@ fill(): Этот метод заполняет все элементы
 
 const arr6 = ['apple', 'banana', 'cherry'];
 arr6.fill('orange', 1, 2);
-console.log(arr6); // Output: ['apple', 'orange', 'cherry']
+console.log(arr6); // ['apple', 'orange', 'cherry']
+
 
 /*
 from(): Этот метод создает новый массив из
@@ -64,9 +64,10 @@ from(): Этот метод создает новый массив из
 каждому элементу нового массива.
 */
 
-const obj1 = { 0: 'apple', 1: 'banana', 2: 'cherry', length: 3 }
+const obj1 = { 0: 'apple', 1: 'banana', 2: 'cherry', length: 3 };
 const arr7 = Array.from(obj1);
-console.log(arr7);  // Output: ['apple', 'banana' 'cherry'[
+console.log(arr7); // ['apple', 'banana', 'cherry']
+
 
 /*
 join(): этот метод объединяет все элементы
@@ -76,16 +77,16 @@ join(): этот метод объединяет все элементы
 */
 
 const arr8 = ['apple', 'banana', 'cherry'];
-const str1 = arr8.join(', ');
-console.log(str1); // Output: 'apple, banana, cherry'
+const joinedStr = arr8.join(', ');
+console.log(joinedStr); // 'apple, banana, cherry'
 
 /*
 toString(): этот метод возвращает строку, представляющую массив и его элементы.
 */
 
-const arr89 = ['apple', 'banana', 'cherry'];
+const arr9 = ['apple', 'banana', 'cherry'];
 const str2 = arr9.toString();
-console.log(str2); // Output: 'apple,banana, cherry'
+console.log(str2); // 'apple,banana,cherry'y'
 
 /* 
 pop(): этот метод удаляет последний элемент из массива и возвращает этот элемент.
