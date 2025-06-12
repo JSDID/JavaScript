@@ -1,3 +1,14 @@
+/* push(): Этот метод добавляет в массив */
+
+let famely = ['Sasha', 'Sasha'];
+let newPepople = ['Anna'];
+
+newPepople.forEach(function (name) {
+    famely.push(name);
+});
+
+console.log(famely);
+
 
 /* values(): Этот метод возвращает итератор,
 который предоставляет значения для каждого индекса в

@@ -1,20 +1,3 @@
-/* ES5 - function
-Функции, особенно полезные для коротких однострочных операций.
-*/
-
-function ES5(x1, y1) {
-    return x1 + y1;
-}
-
-ES5(2, 2);
-
-/* ES6 - function 
-Функция стрелок обеспечивает краткий синтаксис для записи.
-*/
-
-const ES6 = (x2, y2) => { return x2 + y2 };
-console.log(ES6(2, 2));
-
 /* Template Literal
 Шаблонные литералы позволяют встраивать выражения в строки, объединять строки.
 */
@@ -32,6 +15,24 @@ Destructuring Assignment
 const person = { name2: "Sasha", age1: 22 }
 const { name2, age1 } = person;
 console.log(person);
+
+/* ES5 - function
+Функции, особенно полезные для коротких однострочных операций.
+*/
+
+function ES5(x1, y1) {
+    return x1 + y1;
+}
+
+ES5(2, 2);
+
+/* ES6 - function 
+Функция стрелок обеспечивает краткий синтаксис для записи.
+*/
+
+const ES6 = (x2, y2) => { return x2 + y2 };
+console.log(ES6(2, 2));
+
 
 /*
 Spred Operator
@@ -55,7 +56,9 @@ const sum = (...numbers3) => {
 console.log(sum(1, 2, 3));
 
 /* 
-Async/await — это синтаксис для более лаконичной обработки асинхронного кода, предоставляющий более понятную альтернативу работе с Promise.
+Async/await 
+Это синтаксис для обработки асинхронного кода, 
+иначе весь код выполняется последовательно.
 */
 
 const API = "https://api.example.com";
@@ -69,13 +72,34 @@ const fetchData = async () => {
 }
 
 /* Map & Set 
-Map и Set — новые структуры данных, представленные в ES6. Map — это упорядоченная коллекция пар «ключ-значение», а Set — это коллекция уникальных значений.
+Map и Set — структуры данных типа класса, представленные в ES6. 
+Map — это упорядоченная коллекция пар «ключ-значение», 
+Set — это коллекция уникальных значений.
 */
 
 const numberMap = new Map().set("one", 1);
 
 const unique = new Set([1, 2, 3, 2, 1]);
 unique.forEach((number) => console(number));
+
+const mySet = new Set();
+
+mySet.add(1);
+mySet.add('JSDID');
+
+// Проверка наличия элемента
+const hasElement = mySet.has(1); 
+
+// Удаление элемента
+mySet.delete(1);
+
+// Проверка количества элементов
+const size = mySet.size;
+
+// Итерация по элементам
+mySet.forEach((value)=> {
+    console.log(value);
+});
 
 /*
 Default Parameters 
