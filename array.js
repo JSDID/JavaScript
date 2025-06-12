@@ -1,7 +1,12 @@
+/* Array.from(str): Этот метод переводит строку в массив  */
+
+const str = 'Aleksandr';
+console.log(Array.from(str));
+
 /* push(): Этот метод добавляет в массив */
 
-let famely = ['Sasha', 'Sasha'];
-let newPepople = ['Anna'];
+let famely = ['Sasha', 'Vika'];
+let newPepople = ['Egor'];
 
 newPepople.forEach(function (name) {
     famely.push(name);
