@@ -1,5 +1,5 @@
 /*
-1. Что такое DOM?
+Что такое DOM?
 DOM расшифровывается как Document Object Model (Объектная Модель Документа). 
 Это программный интерфейс, предоставляемый браузером, который позволяет JavaScript взаимодействовать с содержимым HTML и CSS на веб-странице и изменять его.
 Представьте DOM как древовидную структуру (называемую деревом DOM), где:
@@ -9,7 +9,7 @@ DOM расшифровывается как Document Object Model (Объект�
 */
 
 /*
-2. Зачем использовать DOM?
+Зачем использовать DOM?
 Потому что он позволяет:
 • Читать и изменять содержимое
 • Добавлять или удалять элементы
@@ -17,7 +17,7 @@ DOM расшифровывается как Document Object Model (Объект�
 */
 
 /*
-3. Accessing Elements
+Accessing Elements
 Можно выбирать элементы на странице несколькими способами
 */
 
@@ -37,7 +37,7 @@ const elemQuery = document.querySelector('.myClass');
 const elemsQueryAll = document.querySelectorAll('div.myClass');
 
 /*
-4. Изменение содержимого Вы можете изменить текст или HTML внутри элемента.
+Изменение содержимого Вы можете изменить текст или HTML внутри элемента.
 */
 
 // Изменить только текст внутри элемента
@@ -47,7 +47,7 @@ document.getElementById('myElement').textContent = 'Новый текст';
 document.getElementById('myElement').innerHTML = '<strong>Жирный текст</strong>';
 
 /*
-5. Changing Styles
+Changing Styles
 Можно динамически изменять CSS-стили.
 */
 
@@ -61,7 +61,7 @@ document.getElementById('myElement').style.fontSize = '24px';
 document.getElementById('myElement').style.cssText = 'background: yellow; border: 1px solid black;';
 
 /*
-6. Adding/Removing
+Adding/Removing
 Это полезно для переключения стилей
 */
 
@@ -75,7 +75,7 @@ document.getElementById('myElement').classList.remove('active');
 document.getElementById('myElement').classList.toggle('active');
 
 /*
-7. Creating new elements
+Creating new elements
 Можно создавать новые HTML-элементы
 */
 
@@ -89,7 +89,7 @@ newParagraph.textContent = 'Это новый абзац!';
 document.body.appendChild(newParagraph);
 
 /*
-8. Removing elements
+Removing elements
 Удаление элементов из DOM
 */
 
@@ -100,7 +100,7 @@ const elem = document.getElementById('myElement');
 elem.remove();
 
 /*
-9. Adding Event Listeners
+Adding Event Listeners
 Можно удалять элементы из DOM.
 */
 
@@ -110,7 +110,7 @@ document.getElementById('deleteBtn').addEventListener('click', function () {
 });
 
 /*
-10. DOM Hierarchy & Navigation
+DOM Hierarchy & Navigation
 Можно перемещаться между родительскими и дочерними элементами.
 */
 
@@ -125,8 +125,13 @@ const firstChild = parent.firstElementChild;
 // Получить всех детей
 const allChildren = parent.children;
 
+let element = document.getElementById('id');
+for (let i = 0; i < element.lenght; i++) {
+  element.style.color = 'red';
+}
+
 /*
-11. Пример проекта
+Пример 
 
 Изменение текста заголовка по клику
 
