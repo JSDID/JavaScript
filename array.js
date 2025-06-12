@@ -371,3 +371,23 @@ const squaredNumbers = numbers7.map((number) => {
 });
 return number * number;
 console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+
+/*
+FILTERO
+Создает новый массив, содержащий только элементы,
+которые проходят тест, реализованный предоставленной
+функцией.
+*/ 
+
+const products = [
+    { name: 'Phone', price: 500 },
+    { name: 'Laptop', price: 1000 },
+    { name: 'Charger', price: 20 }
+];
+
+const expensiveProducts = products.filter(
+    product => product.price > 500
+);
+
+console.log(expensiveProducts);
+// Output: [{ name: 'Laptop', price: 1000 }]
