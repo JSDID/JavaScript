@@ -377,7 +377,7 @@ FILTERO
 Создает новый массив, содержащий только элементы,
 которые проходят тест, реализованный предоставленной
 функцией.
-*/ 
+*/
 
 const products = [
     { name: 'Phone', price: 500 },
@@ -391,3 +391,102 @@ const expensiveProducts = products.filter(
 
 console.log(expensiveProducts);
 // Output: [{ name: 'Laptop', price: 1000 }]
+
+
+/*
+findMax
+Найти максимальное число в массиве
+*/
+
+function findMax(arr) {
+    let max = arr[0]; // Предполагаем, что первый элемент — максимальный
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+// Использование
+console.log(findMax([5, 2, 8, 1, 9])); // Вывод: 9
+
+/*
+reverseArray
+Развернуть массив (перевернуть порядок элементов)
+*/
+
+function reverseArray(arr) {
+    let reversed = []; // Новый массив для хранения в обратном порядке
+    for (let i = arr.length - 1; i >= 0; i--) {
+        reversed.push(arr[i]); // Добавляем элементы с конца исходного массива
+    }
+    return reversed;
+}
+
+// Использование
+console.log(reverseArray([1, 2, 3, 4, 5])); // Вывод: [5, 4, 3, 2, 1]
+
+/*
+removeDuplicates
+Удалить дубликаты из массива
+*/
+
+function removeDuplicates(arr) {
+    let uniqueArr = []; // Новый массив для хранения уникальных значений
+    for (let i = 0; i < arr.length; i++) {
+        if (!uniqueArr.includes(arr[i])) {
+            uniqueArr.push(arr[i]); // Добавляем только те элементы, которых ещё нет
+        }
+    }
+    return uniqueArr;
+}
+
+// Использование
+console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5])); // Вывод: [1, 2, 3, 4, 5]
+
+
+/*
+isSorted
+Проверить, отсортирован ли массив
+*/
+
+function isSorted(arr) {
+    for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i] > arr[i + 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Использование
+console.log(isSorted([1, 2, 3, 4, 5])); // Вывод: true
+console.log(isSorted([1, 3, 2, 4, 5])); // Вывод: false
+
+
+/*
+sortAscending
+Отсортировать массив по возрастанию
+*/
+
+function sortAscending(arr) {
+    return arr.sort((a, b) => a - b);
+}
+
+// Использование
+console.log(sortAscending([5, 2, 9, 1, 5, 6]));
+// Вывод: [1, 2, 5, 5, 6, 9]
+
+/*
+sortDescending
+Отсортировать массив по убыванию
+*/
+
+function sortDescending(arr) {
+    return arr.sort((a, b) => b - a);
+}
+
+// Использование
+console.log(sortDescending([5, 2, 9, 1, 5, 6]));
+// Вывод: [9, 6, 5, 5, 2, 1]
