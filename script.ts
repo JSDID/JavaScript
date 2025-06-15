@@ -1,6 +1,5 @@
 // Как объявлять типы
 
-let name1: string = "Alex";         // Разрешены только строки
 let age: number = 28;               // Разрешены только числа
 let isHappy: boolean = false;       // Разрешены только true или false
 
@@ -16,13 +15,13 @@ multiply(4, 7);
 // Интерфейсы и типы
 
 interface Student {
-  name2: string;
+  name: string;
   age: number;
   isStudying: boolean;
 }
 
 let student: Student = {
-  name2: "Maria",
+  name: "Maria",
   age: 22,
   isStudying: true
 };
@@ -78,7 +77,7 @@ let direction: "up" | "down" = "up"; // Только
 Кортежи: Фиксированное количество элементов с определенными типами.
 */
 
-let fruits: string[] = ["apple", "banana", "cherry"];
+// let fruits: string[] = ["apple", "banana", "cherry"];
 let coordinates: [number, number] = [51.5, -0.1];
 
 /*
@@ -93,7 +92,6 @@ enum Role {
 }
 
 let userRole: Role = Role.User;
-
 
 /*
 Любой и неизвестный
@@ -160,3 +158,4 @@ File: main.ts
 import { multiply } from "./mathUtils";
 console.log(multiply(3, 4));
 */ 
+

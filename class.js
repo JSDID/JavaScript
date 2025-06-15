@@ -19,3 +19,4 @@ class Write extends Person {
 const writer = new Write("Example");
 writer.sayName(); // Выведет: My name is Example
 writer.think();   // Выведет: Example
+

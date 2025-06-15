@@ -108,3 +108,4 @@ obj.key1 = "newValue";
 
 // Вызов метода объекта
 obj.sayHello(); // "Hello!"
+
