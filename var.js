@@ -70,12 +70,12 @@ element.addEventListener("event", functionName);
 // События
 
 // Обработчик клика по элементу
-element.addEventListener("click", function() {
+element.addEventListener("click", function () {
     // Код, который выполнится при клике
 });
 
 // Обработчик события загрузки окна
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
     // Код, который выполнится при загрузке страницы
 });
 
@@ -93,7 +93,7 @@ obj.key1 = "newValue";   // Обновление свойства
 let obj = {
     key1: "value1",
     key2: "value2",
-    sayHello: function() {
+    sayHello: function () {
         console.log("Hello!");
     }
 };
@@ -108,3 +108,8 @@ obj.key1 = "newValue";
 
 // Вызов метода объекта
 obj.sayHello(); // "Hello!"
+
+// Факториал
+function factorial(n) {
+    return n < 1 ? 1 : n * factorial(n - 1);
+}

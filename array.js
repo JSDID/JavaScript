@@ -490,3 +490,21 @@ function sortDescending(arr) {
 // Использование
 console.log(sortDescending([5, 2, 9, 1, 5, 6]));
 // Вывод: [9, 6, 5, 5, 2, 1]
+
+/*
+flattenArray
+Сгладить массив (преобразовать многомерный массив в одномерный)
+*/
+
+function flattenArray(arr) {
+    return arr.flat();
+}
+
+/*
+ifAnagram
+Проверить, являются ли две строки анаграммами
+*/
+
+function ifAnagram(str1, str2) {
+    return str1.split("").sort().join("") === str2.split("").sort().join("");
+}

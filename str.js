@@ -74,3 +74,36 @@ console.log("5".padStart(3, "0")); // "005"
 
 // Дополнение строки до заданной длины в конце
 console.log("5".padEnd(3, "0")); // "500"
+
+// Реверс строки
+
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+
+console.log(reverseString("Hello, Revers!")); // "!dlroW ,olleH"
+
+// Проверка, является ли строка палиндромом
+
+function isPalindrome(str) {
+    return str === str.split("").reverse().join("");
+}
+
+console.log(isPalindrome("madam")); // true
+
+// Удалить дубликаты из массива
+
+function removeDuplicates(arr) {
+    return [...new Set(arr)];
+}
+
+console.log(removeDuplicates([1, 2, 3, 4, 5, 1, 2, 3])); // [1, 2, 3, 4, 5]
+
+// Подсчитать количество символов в строке
+
+function charCount(str) {
+    return str.length;
+}
+
+console.log(charCount("Hello, World!")); // 13
+

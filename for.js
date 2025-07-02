@@ -86,3 +86,21 @@ Array Methods
 const number = [1, 2, 3, 4, 5];
 const doubleNumbers = numbers.map(number => number * 3);
 console.log(doubleNumbers);
+
+let out = "";
+for (let i = 0; i < 100; i++) {
+    if (i % 3 === 0) out += "Fizz";
+    else out += i;
+    out += "<br>";
+}
+document.getElementById("output").innerHTML = out;
+
+// Найти первый уникальный символ в строке
+
+function firstUniqueChar(str) {
+    for (let i = 0; i < str.length; i++) {
+        if (str.indexOf(str[i]) === str.lastIndexOf(str[i])) {
+            return str[i];
+        }
+    }
+}
